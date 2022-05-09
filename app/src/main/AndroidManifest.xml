@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.messengerdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MessengerDemo">
+        <service
+            android:name=".messenger2.MyService2"
+            android:enabled="true"
+            android:exported="true"
+            android:process="com.example.ipc.serviceprocess2">
+
+        </service>
+
+        <activity android:name=".messenger2.MainActivity2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".messenger1.MyService"
+            android:enabled="true"
+            android:exported="true"
+            android:process="com.example.ipc.serviceprocess" />
+
+        <activity android:name=".messenger1.MainActivity"></activity>
+    </application>
+
+</manifest>
